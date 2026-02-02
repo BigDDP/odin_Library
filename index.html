@@ -5,8 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="popup">
+        <form action="" method="post">
+            <fieldset>
+                <label for="title">Title *</label>
+                <label for="author">Author *</label>
+
+                <input type="text" name="title" id="title" placeholder="Enter Title" required/>
+                <input type="text" name="author" id="author" placeholder="Enter Author" required/>
+            </fieldset>
+                <fieldset>
+                <label for="content">Blurb *</label>
+
+                <textarea type="text" name="content" id="content" placeholder="Enter Blurb" required></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="pages">Pages</label>
+                <label for="status">Status</label>
+
+                <input type="number" name="pages" id="pages" placeholder="Enter Page No."/>
+                <select type="text" name="statuses" id="statuses">
+                    <option value="">Select a value...</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Dropped">Dropped</option>
+                    <option value="Pending">Pending</option>
+                </select>
+            </fieldset>
+                <fieldset>
+                <button type="submit">Create Book</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <button id="new_book">New Book</button>
+
     <table>
         <caption>Lbrary</caption>
 
@@ -14,16 +50,22 @@
             <col />
             <col span="2"/>
             <col />
+            <col />
+            <col />
+            <col />
         </colgroup>
 
         <thead>
             <th>Title</th>
             <th>Content</th>
             <th>Author</th>
+            <th>Pages</th>
+            <th>Status</th>
+            <th class="actions"></th>
         </thead>
 
         <tbody>
-            
+            <!-- Dynamic Rows -->
         </tbody>
     </table>
 </body>
